@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* nits: 半角スペースが抜けている */
+.wrapper{
+  width: 400px;
+  margin: auto;
+}
+
+.red {
+  background-color: #ff0000;
+  /* background-color: #f00;
+  background-color: rgb(255, 255, 255); */
+  height: 100px;
+  position: relative;
+}
+
+.white {
+  /* add */
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.purple {
+  width: 40px;
+  height: 40px;
+  background-color: #a9004b;
+  float: left;
+  /* rm */
+  /* margin: 10px; */
+  /* add */
+  margin-right: 10px;
+}
+
+/* rm */
+/* .purple:nth-child(1), .purple:nth-child(2) {
+  margin-right: 0px;
+} */
+
+/* add */
+/* レビュー内容では疑似要素と書かれているがたぶん疑似クラスのこと */
+.purple:last-child {
+  margin-right: 0;
+}
+
+.green {
+  width: 150px;
+  height: 250px;
+  background-color: #00ff51;
+  float: left;
+}
+
+.brown {
+  width: 250px;
+  height: 250px;
+  background-color: #8c2727;
+  float: left;
+  position: relative;
+}
+
+/* orangeもbrownを起点にpositionを行うのは意味が分からないです */
+/* orangeにpositonを当てるとなるとそれぞれに高さ分など加味して当てないといけないので微妙 */
+/* .orange-container {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.orange {
+  width: 140px;
+  height: 40px;
+  background-color: #ff863f;
+  margin-bottom: 10px;
+  border-color: #ffffff;
+  border-width: 5px;
+  border-style: solid; */
+  /* IMO: borderは1行で書くことができる */
+  /* border: solid 5px #fff;
+} */
+
+/* add */
+.orange {
+  width: 140px;
+  height: 40px;
+  background-color: #ff863f;
+  border: solid 5px #fff;
+  margin: 40px 0px 0px 40px;
+}
+
+/* add */
+.orange:not(:first-child) {
+  margin-top: 10px;
+}
+
+/* add */
+/* .orange:last-child {
+  margin-bottom: 0;
+} */
+
+.yellow {
+  height: 100px;
+  background-color: #ffd000;
+}
+
+.test {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+}
